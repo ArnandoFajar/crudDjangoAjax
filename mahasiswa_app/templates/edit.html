@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<form action="" id="edit">
+    {% csrf_token %}
+    <input type="hidden" id="mahasiswa_id" value="{{mahasiswa.id}}">
+    <div class="mb-3">
+        <label>Nama</label>
+        <input type="text" name="name" id="name" class="form-control" value="{{mahasiswa.name}}" required>
+    </div>
+    <div class="mb-3">
+        <label>Email</label>
+        <input type="email" name="email" id="email" class="form-control" value="{{mahasiswa.email}}" required>
+    </div>
+    <div class="mb-3">
+        <label>Kontak</label>
+        <input type="number" name="contact" id="contact" class="form-control" value="{{mahasiswa.contact}}" required>
+    </div>
+    <div class="mb-3">
+        <button type="button" id="update" class="btn btn-warning">Update</button>
+    </div>
+</form>
+
+{% endblock body %}

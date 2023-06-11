@@ -1,0 +1,25 @@
+<table class="table table-bordered">
+    <thead class="alert-success">
+        <tr>
+            <th>Nama</th>
+            <th>Email</th>
+            <th>Contact</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for mahasiswa in mahasiswas %}
+        <tr>
+            <td>{{mahasiswa.name}}</td>
+            <td>{{mahasiswa.email}}</td>
+            <td>{{mahasiswa.contact}}</td>
+            <td>
+                <center>
+                    <a class="btn btn-warning edit" name="{{mahasiswa.id}}">Edit</a>
+                    <a class="btn btn-danger delete" name="{{mahasiswa.id}}">Delete</a>
+                </center>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
