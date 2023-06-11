@@ -14,10 +14,14 @@ install mysqlclient
 
 > pip install mysqlclient
 
-create your database
+create your database and edit your settings.py in databases
 
 makemigration & migrate
 
 > pyhton manage.py makemigrations
 >
 > python manage.py migrate
+
+Run 
+
+> python manage.py runserver
